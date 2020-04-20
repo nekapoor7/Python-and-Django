@@ -1,2 +1,2 @@
 # Python-and-Django
-python programs
+This is my respository for Python and Django Projects
