@@ -1,0 +1,14 @@
+<form method="POST" action=""add>
+        {% csrf_token %}
+        <label>ID:</label>
+        <div>{{ form.eid }}</div>
+        <label>Employee Name</label>
+        <div>{{ form.ename }}</div>
+        <label>Employee Email</label>
+        <div>{{ form.email }}</div>
+        <label>Employee Contact</label>
+        <div>{{ form.econtact }}</div>
+        <div>
+            <button type="submit">ADD</button>
+        </div>
+</form>

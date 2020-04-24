@@ -5,7 +5,7 @@ list1 = list(map(int,input().split()))
 list2 = []
 #new_list = list(set(list1))
 
-[list2.append(x) for x in list1 if x  in list2]
+[list2.append(x) for x in list1 if x in list2]
 print(list2)
 
 

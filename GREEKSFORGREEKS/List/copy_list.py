@@ -1,7 +1,7 @@
 #Python | Cloning or Copying a list
 
 def cloneCopy(list1):
-    list1_copy = [ i for i in list1]
+    list1_copy = [i for i in list1]
     return list1_copy
 
 

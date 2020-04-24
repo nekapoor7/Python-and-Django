@@ -8,7 +8,7 @@ class Test:
     def __add__(self, other):
         t = []
         for x , y in zip(self.num1,other.num1):
-            #print(x + y)
+            print(x + y)
             t.append(x+y)
         return t
          #return self.num1 + other.num1
@@ -31,19 +31,19 @@ class Test:
 
 
 if __name__ == "__main__":
-    '''t = Test()
+    t = Test()
     t.func()
     print(t.get_var2())
     print(t.setter_var2(55))
-    print(t.get_var2())'''
+    print(t.get_var2())
 
-    '''T1 = Test(num1=10)
+    T1 = Test(num1=10)
     T2 = Test(num1=22)
-    print("Operation Added",T1 + T2)'''
+    print("Operation Added",T1 + T2)
 
-    list1 = list(map(int,input().split()))
+    '''list1 = list(map(int,input().split()))
     list2 = list(map(int,input().split()))
 
     L1 = Test(num1=list1)
     L2 = Test(num1=list2)
-    print("Addition of two lists",L1 + L2,end=' ')
+    print("Addition of two lists",L1 + L2,end=' ')'''
