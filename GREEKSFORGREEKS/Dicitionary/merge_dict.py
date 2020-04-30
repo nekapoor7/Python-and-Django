@@ -23,6 +23,7 @@ merge_dict = {**mydict,**mydict1}
 print(merge_dict)
 
 dict_with_int = dict((k, int(v)) for k, v in merge_dict.items())
+print(dict_with_int)
 sum = 0
 
 for i in dict_with_int:

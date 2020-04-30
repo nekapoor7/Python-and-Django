@@ -1,4 +1,4 @@
-string = str(input("Enter the string "))
+'''string = str(input("Enter the string "))
 string1 = ''
 
 for i in range(len(string)):
@@ -8,4 +8,6 @@ for i in range(len(string)):
         string1 = string1 + string[i]
 
 print("\nOriginal String in Lowercase  =  ", string)
-print("The Given String in Uppercase =  ", string1)
+print("The Given String in Uppercase =  ", string1)'''
+
+

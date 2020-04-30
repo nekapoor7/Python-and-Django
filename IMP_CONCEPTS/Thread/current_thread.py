@@ -1,3 +1,12 @@
+"""Set and Get Thread Name
+
+1. current_thread() : This function returns the current thread object.
+2. getName() : To get the name of thread we use this method.
+3. setName(name) : Use to set the name of the thread.
+4. name Property : Use to get or set name of the thread.
+"""
+
+
 from threading import Thread,current_thread
 
 def display():

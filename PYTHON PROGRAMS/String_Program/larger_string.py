@@ -1,4 +1,4 @@
-from itertools import count
+'''from itertools import count
 
 def largest_string(string1,string2):
     count1 = 0
@@ -21,4 +21,12 @@ def largest_string(string1,string2):
 
 string1 = str(input("Enter first string"))
 string2 = str(input("Enter second string"))
-largest_string(string1,string2)
+largest_string(string1,string2)'''
+
+import re
+
+string1 = str(input("Enter first string"))
+string2 = str(input("Enter second string"))
+
+longest = len(max(re.findall(r'\w+',string1), key = len))
+print(longest)

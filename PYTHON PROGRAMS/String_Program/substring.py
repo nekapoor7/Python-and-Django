@@ -1,9 +1,12 @@
-string = str(input("Enter the string"))
-string1 = str(input("Enter substring"))
+"""Python | Check if a Substring is Present in a Given String"""
 
-try:
-    string.index(string1)
-except ValueError:
-    print("Not Found")
-else:
+string1 = str(input())
+string2 = str(input())
+result = [val for val in string2 if val in string1]
+var = ''.join(result)
+
+if var in string1:
     print("Found")
+else:
+    print("Not Found")
+

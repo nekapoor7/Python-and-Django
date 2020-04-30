@@ -7,6 +7,7 @@ for i in range(limit):
     mydict.update({key:item})
 print(mydict)
 
+
 sum = 0
 for i in mydict:
     sum = sum + mydict[i]
