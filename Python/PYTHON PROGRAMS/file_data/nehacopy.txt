@@ -1,7 +1,0 @@
-red
-black
-white
-yellow
-red
-white
-green

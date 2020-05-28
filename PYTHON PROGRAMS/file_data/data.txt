@@ -10,5 +10,4 @@ neha kapoor
 harsh
 name
 abc
-
 apple
