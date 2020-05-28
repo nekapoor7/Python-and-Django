@@ -1,0 +1,389 @@
+[admin@localhost ~]$ vi ~/.bash_profile 
+[admin@localhost ~]$ source ~/.bash_profile 
+[admin@localhost ~]$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+^Z
+[1]+  Stopped                 ping 8.8.8.8
+[admin@localhost ~]$ 
+[admin@localhost ~]$ 
+[admin@localhost ~]$ 
+[admin@localhost ~]$ git 
+usage: git [--version] [--help] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty Git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+'git help -a' and 'git help -g' lists available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+[admin@localhost ~]$ git clone https://github.com/pyenv/pyenv.git 
+Cloning into 'pyenv'...
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 17608 (delta 6), reused 7 (delta 3), pack-reused 17592
+Receiving objects: 100% (17608/17608), 3.44 MiB | 1.47 MiB/s, done.
+Resolving deltas: 100% (11958/11958), done.
+[admin@localhost ~]$ 
+[admin@localhost ~]$ 
+[admin@localhost ~]$ 
+[admin@localhost ~]$ ls
+Desktop  Documents  Downloads  index.html  matrics  Music  Pictures  Public  pyenv  python2-analytics  Templates  thinclient_drives  venv  Videos
+[admin@localhost ~]$ mv pyenv/ .pyenv 
+[admin@localhost ~]$ cd .pyenv/
+[admin@localhost .pyenv]$ ls
+bin  CHANGELOG.md  COMMANDS.md  completions  CONDUCT.md  libexec  LICENSE  Makefile  plugins  pyenv.d  README.md  src  terminal_output.png  test
+[admin@localhost .pyenv]$ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+[admin@localhost .pyenv]$ echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+[admin@localhost .pyenv]$ echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bash_profile
+[admin@localhost .pyenv]$ source ~/.bash_profile 
+[admin@localhost .pyenv]$ pyenv 
+pyenv 1.2.16-5-g7097f82
+Usage: pyenv <command> [<args>]
+
+Some useful pyenv commands are:
+   commands    List all available pyenv commands
+   exec        Run an executable with the selected Python version
+   global      Set or show the global Python version
+   help        Display help for a command
+   hooks       List hook scripts for a given pyenv command
+   init        Configure the shell environment for pyenv
+   install     Install a Python version using python-build
+   local       Set or show the local application-specific Python version
+   prefix      Display prefix for a Python version
+   rehash      Rehash pyenv shims (run this after installing executables)
+   root        Display the root directory where versions and shims are kept
+   shell       Set or show the shell-specific Python version
+   shims       List existing pyenv shims
+   uninstall   Uninstall a specific Python version
+   version     Show the current Python version and its origin
+   --version   Display the version of pyenv
+   version-file   Detect the file that sets the current pyenv version
+   version-name   Show the current Python version
+   version-origin   Explain how the current Python version is set
+   versions    List all Python versions available to pyenv
+   whence      List all Python versions that contain the given executable
+   which       Display the full path to an executable
+
+See `pyenv help <command>' for information on a specific command.
+For full documentation, see: https://github.com/pyenv/pyenv#readme
+[admin@localhost .pyenv]$ pyenv install -l | grep 2.7
+  2.7.0
+  2.7-dev
+  2.7.1
+  2.7.2
+  2.7.3
+  2.7.4
+  2.7.5
+  2.7.6
+  2.7.7
+  2.7.8
+  2.7.9
+  2.7.10
+  2.7.11
+  2.7.12
+  2.7.13
+  2.7.14
+  2.7.15
+  2.7.16
+  2.7.17
+  activepython-2.7.14
+  ironpython-2.7.4
+  ironpython-2.7.5
+  ironpython-2.7.6.3
+  ironpython-2.7.7
+  jython-2.7.0
+  jython-2.7.1
+  pypy2.7-5.8.0-src
+  pypy2.7-5.8.0
+  pypy2.7-5.9.0-src
+  pypy2.7-5.9.0
+  pypy2.7-5.10.0-src
+  pypy2.7-5.10.0
+  pypy2.7-6.0.0-src
+  pypy2.7-6.0.0
+  pypy2.7-7.0.0-src
+  pypy2.7-7.0.0
+  pypy2.7-7.1.0-src
+  pypy2.7-7.1.0
+  pypy2.7-7.1.1-src
+  pypy2.7-7.1.1
+  pypy2.7-7.2.0-src
+  pypy2.7-7.2.0
+  pypy2.7-7.3.0-src
+  pypy2.7-7.3.0
+  stackless-2.7-dev
+  stackless-2.7.2
+  stackless-2.7.3
+  stackless-2.7.4
+  stackless-2.7.5
+  stackless-2.7.6
+  stackless-2.7.7
+  stackless-2.7.8
+  stackless-2.7.9
+  stackless-2.7.10
+  stackless-2.7.11
+  stackless-2.7.12
+  stackless-2.7.14
+[admin@localhost .pyenv]$ pyenv install 2.7.8
+Downloading Python-2.7.8.tar.xz...
+-> https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz
+Installing Python-2.7.8...
+Ignoring potentially dangerous file name ../Python-2.7.8/Lib/site.py
+patching file ./Lib/site.py
+patching file ./Lib/ssl.py
+patching file ./Modules/_ssl.c
+WARNING: The Python readline extension was not compiled. Missing the GNU readline lib?
+WARNING: The Python bz2 extension was not compiled. Missing the bzip2 lib?
+WARNING: The Python sqlite3 extension was not compiled. Missing the SQLite3 lib?
+ERROR: The Python ssl extension was not compiled. Missing the OpenSSL lib?
+
+Please consult to the Wiki page to fix the problem.
+https://github.com/pyenv/pyenv/wiki/Common-build-problems
+
+
+BUILD FAILED (CentOS Linux 7 using python-build 1.2.16-5-g7097f82)
+
+Inspect or clean up the working tree at /tmp/python-build.20200205142523.12478
+Results logged to /tmp/python-build.20200205142523.12478.log
+
+Last 10 log lines:
+(cd /home/admin/.pyenv/versions/2.7.8/bin; ln -s python2-config python-config)
+test -d /home/admin/.pyenv/versions/2.7.8/lib/pkgconfig || /bin/install -c -d -m 755 /home/admin/.pyenv/versions/2.7.8/lib/pkgconfig
+rm -f /home/admin/.pyenv/versions/2.7.8/lib/pkgconfig/python2.pc
+(cd /home/admin/.pyenv/versions/2.7.8/lib/pkgconfig; ln -s python-2.7.pc python2.pc)
+rm -f /home/admin/.pyenv/versions/2.7.8/lib/pkgconfig/python.pc
+(cd /home/admin/.pyenv/versions/2.7.8/lib/pkgconfig; ln -s python2.pc python.pc)
+rm -f /home/admin/.pyenv/versions/2.7.8/share/man/man1/python2.1
+(cd /home/admin/.pyenv/versions/2.7.8/share/man/man1; ln -s python2.7.1 python2.1)
+rm -f /home/admin/.pyenv/versions/2.7.8/share/man/man1/python.1
+(cd /home/admin/.pyenv/versions/2.7.8/share/man/man1; ln -s python2.1 python.1)
+[admin@localhost .pyenv]$ sudo yum -y install epel-release
+[sudo] password for admin: 
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.tino.org
+ * epel: sg.fedora.ipserverone.com
+ * extras: mirror.tino.org
+ * updates: mirror.tino.org
+Package epel-release-7-12.noarch already installed and latest version
+Nothing to do
+[admin@localhost .pyenv]$ sudo yum install git gcc zlib-devel bzip2-devel readline-devel sqlite-devel openssl-devel 
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.tino.org
+ * epel: epel.dionipe.id
+ * extras: mirror.tino.org
+ * updates: mirror.tino.org
+Package git-1.8.3.1-21.el7_7.x86_64 already installed and latest version
+Package gcc-4.8.5-39.el7.x86_64 already installed and latest version
+Package zlib-devel-1.2.7-18.el7.x86_64 already installed and latest version
+Resolving Dependencies
+--> Running transaction check
+---> Package bzip2-devel.x86_64 0:1.0.6-13.el7 will be installed
+---> Package openssl-devel.x86_64 1:1.0.2k-19.el7 will be installed
+--> Processing Dependency: krb5-devel(x86-64) for package: 1:openssl-devel-1.0.2k-19.el7.x86_64
+---> Package readline-devel.x86_64 0:6.2-11.el7 will be installed
+--> Processing Dependency: ncurses-devel for package: readline-devel-6.2-11.el7.x86_64
+---> Package sqlite-devel.x86_64 0:3.7.17-8.el7_7.1 will be installed
+--> Running transaction check
+---> Package krb5-devel.x86_64 0:1.15.1-37.el7_7.2 will be installed
+--> Processing Dependency: libverto-devel for package: krb5-devel-1.15.1-37.el7_7.2.x86_64
+--> Processing Dependency: libselinux-devel for package: krb5-devel-1.15.1-37.el7_7.2.x86_64
+--> Processing Dependency: libcom_err-devel for package: krb5-devel-1.15.1-37.el7_7.2.x86_64
+--> Processing Dependency: keyutils-libs-devel for package: krb5-devel-1.15.1-37.el7_7.2.x86_64
+---> Package ncurses-devel.x86_64 0:5.9-14.20130511.el7_4 will be installed
+--> Running transaction check
+---> Package keyutils-libs-devel.x86_64 0:1.5.8-3.el7 will be installed
+---> Package libcom_err-devel.x86_64 0:1.42.9-16.el7 will be installed
+---> Package libselinux-devel.x86_64 0:2.5-14.1.el7 will be installed
+--> Processing Dependency: libsepol-devel(x86-64) >= 2.5-10 for package: libselinux-devel-2.5-14.1.el7.x86_64
+--> Processing Dependency: pkgconfig(libsepol) for package: libselinux-devel-2.5-14.1.el7.x86_64
+--> Processing Dependency: pkgconfig(libpcre) for package: libselinux-devel-2.5-14.1.el7.x86_64
+---> Package libverto-devel.x86_64 0:0.2.5-4.el7 will be installed
+--> Running transaction check
+---> Package libsepol-devel.x86_64 0:2.5-10.el7 will be installed
+---> Package pcre-devel.x86_64 0:8.32-17.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===================================================================================================================================================================================================================
+ Package                                                 Arch                                       Version                                                      Repository                                   Size
+===================================================================================================================================================================================================================
+Installing:
+ bzip2-devel                                             x86_64                                     1.0.6-13.el7                                                 base                                        218 k
+ openssl-devel                                           x86_64                                     1:1.0.2k-19.el7                                              base                                        1.5 M
+ readline-devel                                          x86_64                                     6.2-11.el7                                                   base                                        139 k
+ sqlite-devel                                            x86_64                                     3.7.17-8.el7_7.1                                             updates                                     104 k
+Installing for dependencies:
+ keyutils-libs-devel                                     x86_64                                     1.5.8-3.el7                                                  base                                         37 k
+ krb5-devel                                              x86_64                                     1.15.1-37.el7_7.2                                            updates                                     272 k
+ libcom_err-devel                                        x86_64                                     1.42.9-16.el7                                                base                                         32 k
+ libselinux-devel                                        x86_64                                     2.5-14.1.el7                                                 base                                        187 k
+ libsepol-devel                                          x86_64                                     2.5-10.el7                                                   base                                         77 k
+ libverto-devel                                          x86_64                                     0.2.5-4.el7                                                  base                                         12 k
+ ncurses-devel                                           x86_64                                     5.9-14.20130511.el7_4                                        base                                        712 k
+ pcre-devel                                              x86_64                                     8.32-17.el7                                                  base                                        480 k
+
+Transaction Summary
+===================================================================================================================================================================================================================
+Install  4 Packages (+8 Dependent packages)
+
+Total download size: 3.7 M
+Installed size: 8.8 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/12): libcom_err-devel-1.42.9-16.el7.x86_64.rpm                                                                                                                                           |  32 kB  00:00:00     
+(2/12): keyutils-libs-devel-1.5.8-3.el7.x86_64.rpm                                                                                                                                          |  37 kB  00:00:00     
+(3/12): libverto-devel-0.2.5-4.el7.x86_64.rpm                                                                                                                                               |  12 kB  00:00:00     
+(4/12): bzip2-devel-1.0.6-13.el7.x86_64.rpm                                                                                                                                                 | 218 kB  00:00:00     
+(5/12): krb5-devel-1.15.1-37.el7_7.2.x86_64.rpm                                                                                                                                             | 272 kB  00:00:00     
+(6/12): libsepol-devel-2.5-10.el7.x86_64.rpm                                                                                                                                                |  77 kB  00:00:00     
+(7/12): libselinux-devel-2.5-14.1.el7.x86_64.rpm                                                                                                                                            | 187 kB  00:00:01     
+(8/12): readline-devel-6.2-11.el7.x86_64.rpm                                                                                                                                                | 139 kB  00:00:00     
+(9/12): sqlite-devel-3.7.17-8.el7_7.1.x86_64.rpm                                                                                                                                            | 104 kB  00:00:00     
+(10/12): pcre-devel-8.32-17.el7.x86_64.rpm                                                                                                                                                  | 480 kB  00:00:01     
+(11/12): ncurses-devel-5.9-14.20130511.el7_4.x86_64.rpm                                                                                                                                     | 712 kB  00:00:02     
+(12/12): openssl-devel-1.0.2k-19.el7.x86_64.rpm                                                                                                                                             | 1.5 MB  00:00:03     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                              816 kB/s | 3.7 MB  00:00:04     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : keyutils-libs-devel-1.5.8-3.el7.x86_64                                                                                                                                                         1/12 
+  Installing : libsepol-devel-2.5-10.el7.x86_64                                                                                                                                                               2/12 
+  Installing : pcre-devel-8.32-17.el7.x86_64                                                                                                                                                                  3/12 
+  Installing : libselinux-devel-2.5-14.1.el7.x86_64                                                                                                                                                           4/12 
+  Installing : libcom_err-devel-1.42.9-16.el7.x86_64                                                                                                                                                          5/12 
+  Installing : ncurses-devel-5.9-14.20130511.el7_4.x86_64                                                                                                                                                     6/12 
+  Installing : libverto-devel-0.2.5-4.el7.x86_64                                                                                                                                                              7/12 
+  Installing : krb5-devel-1.15.1-37.el7_7.2.x86_64                                                                                                                                                            8/12 
+  Installing : 1:openssl-devel-1.0.2k-19.el7.x86_64                                                                                                                                                           9/12 
+  Installing : readline-devel-6.2-11.el7.x86_64                                                                                                                                                              10/12 
+  Installing : sqlite-devel-3.7.17-8.el7_7.1.x86_64                                                                                                                                                          11/12 
+  Installing : bzip2-devel-1.0.6-13.el7.x86_64                                                                                                                                                               12/12 
+  Verifying  : bzip2-devel-1.0.6-13.el7.x86_64                                                                                                                                                                1/12 
+  Verifying  : libverto-devel-0.2.5-4.el7.x86_64                                                                                                                                                              2/12 
+  Verifying  : krb5-devel-1.15.1-37.el7_7.2.x86_64                                                                                                                                                            3/12 
+  Verifying  : sqlite-devel-3.7.17-8.el7_7.1.x86_64                                                                                                                                                           4/12 
+  Verifying  : ncurses-devel-5.9-14.20130511.el7_4.x86_64                                                                                                                                                     5/12 
+  Verifying  : libcom_err-devel-1.42.9-16.el7.x86_64                                                                                                                                                          6/12 
+  Verifying  : pcre-devel-8.32-17.el7.x86_64                                                                                                                                                                  7/12 
+  Verifying  : 1:openssl-devel-1.0.2k-19.el7.x86_64                                                                                                                                                           8/12 
+  Verifying  : libselinux-devel-2.5-14.1.el7.x86_64                                                                                                                                                           9/12 
+  Verifying  : libsepol-devel-2.5-10.el7.x86_64                                                                                                                                                              10/12 
+  Verifying  : readline-devel-6.2-11.el7.x86_64                                                                                                                                                              11/12 
+  Verifying  : keyutils-libs-devel-1.5.8-3.el7.x86_64                                                                                                                                                        12/12 
+
+Installed:
+  bzip2-devel.x86_64 0:1.0.6-13.el7                 openssl-devel.x86_64 1:1.0.2k-19.el7                 readline-devel.x86_64 0:6.2-11.el7                 sqlite-devel.x86_64 0:3.7.17-8.el7_7.1                
+
+Dependency Installed:
+  keyutils-libs-devel.x86_64 0:1.5.8-3.el7   krb5-devel.x86_64 0:1.15.1-37.el7_7.2          libcom_err-devel.x86_64 0:1.42.9-16.el7   libselinux-devel.x86_64 0:2.5-14.1.el7   libsepol-devel.x86_64 0:2.5-10.el7  
+  libverto-devel.x86_64 0:0.2.5-4.el7        ncurses-devel.x86_64 0:5.9-14.20130511.el7_4   pcre-devel.x86_64 0:8.32-17.el7          
+
+Complete!
+[admin@localhost .pyenv]$ pyenv install 2.7.8
+Downloading Python-2.7.8.tar.xz...
+-> https://www.python.org/ftp/python/2.7.8/Python-2.7.8.tar.xz
+Installing Python-2.7.8...
+Ignoring potentially dangerous file name ../Python-2.7.8/Lib/site.py
+patching file ./Lib/site.py
+patching file ./Lib/ssl.py
+patching file ./Modules/_ssl.c
+Installing pip from https://bootstrap.pypa.io/get-pip.py...
+Installed Python-2.7.8 to /home/admin/.pyenv/versions/2.7.8
+
+[admin@localhost .pyenv]$ pyenv versions 
+* system (set by /home/admin/.pyenv/version)
+  2.7.8
+[admin@localhost .pyenv]$ cd ..
+[admin@localhost ~]$ pyenv local 2.7.8
+[admin@localhost ~]$ pyenv local 
+2.7.8
+[admin@localhost ~]$ pyenv versoins 
+pyenv: no such command `versoins'
+[admin@localhost ~]$ pyenv versions 
+  system
+* 2.7.8 (set by /home/admin/.python-version)
+[admin@localhost ~]$ python --version 
+Python 2.7.8
+[admin@localhost ~]$ pip list 
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+Package    Version
+---------- -------
+pip        20.0.2 
+setuptools 44.0.0 
+wheel      0.34.2 
+[admin@localhost ~]$ pip install virtualenv 
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+/home/admin/.pyenv/versions/2.7.8/lib/python2.7/site-packages/pip/_vendor/urllib3/util/ssl_.py:380: SNIMissingWarning: An HTTPS request has been made, but the SNI (Server Name Indication) extension to TLS is not available on this platform. This may cause the server to present an incorrect TLS certificate, which can cause validation failures. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  SNIMissingWarning,
+/home/admin/.pyenv/versions/2.7.8/lib/python2.7/site-packages/pip/_vendor/urllib3/util/ssl_.py:139: InsecurePlatformWarning: A true SSLContext object is not available. This prevents urllib3 from configuring SSL appropriately and may cause certain SSL connections to fail. You can upgrade to a newer version of Python to solve this. For more information, see https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+  InsecurePlatformWarning,
+Collecting virtualenv
+  Using cached virtualenv-16.7.9-py2.py3-none-any.whl (3.4 MB)
+Installing collected packages: virtualenv
+Successfully installed virtualenv-16.7.9
+[admin@localhost ~]$ pip list 
+DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
+Package    Version
+---------- -------
+pip        20.0.2 
+setuptools 44.0.0 
+virtualenv 16.7.9 
+wheel      0.34.2 
+[admin@localhost ~]$ which python 
+~/.pyenv/shims/python
+[admin@localhost ~]$ 
+[admin@localhost ~]$ virtualenv -p ~/.pyenv/shims/python analytics
+Running virtualenv with interpreter /home/admin/.pyenv/shims/python
+Already using interpreter /home/admin/.pyenv/versions/2.7.8/bin/python
+New python executable in /home/admin/analytics/bin/python
+Installing setuptools, pip, wheel...
+done.
+[admin@localhost ~]$ ls
+analytics  Desktop  Documents  Downloads  index.html  matrics  Music  Pictures  Public  python2-analytics  Templates  thinclient_drives  venv  Videos
+[admin@localhost ~]$ cd venv/
+[admin@localhost venv]$ ls
+bin  include  lib  lib64
+[admin@localhost venv]$ cd ..
+[admin@localhost ~]$ ./analytics/
+bin/     include/ lib/     
+[admin@localhost ~]$ ./analytics/bin/activate 
+bash: ./analytics/bin/activate: Permission denied
+[admin@localhost ~]$ ls analytics/
+bin  include  lib
+[admin@localhost ~]$ ll analytics
+total 0
+drwxrwxr-x. 2 admin admin 268 Feb  5 14:41 bin
+drwxrwxr-x. 2 admin admin  23 Feb  5 14:41 include
+drwxrwxr-x. 3 admin admin  23 Feb  5 14:41 lib
+[admin@localhost ~]$ source analytics/bin/activate
+(analytics) [admin@localhost ~]$ 

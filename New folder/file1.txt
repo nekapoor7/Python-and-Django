@@ -1,0 +1,4 @@
+File Operations
+1. read
+2. write
+3. append
